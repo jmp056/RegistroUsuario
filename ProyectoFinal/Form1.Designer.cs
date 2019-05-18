@@ -55,6 +55,7 @@
             // 
             // registrarUsuarioToolStripMenuItem
             // 
+            this.registrarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarUsuarioToolStripMenuItem.Image")));
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
             this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registrarUsuarioToolStripMenuItem.Text = "Registrar usuario";
