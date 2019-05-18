@@ -1,7 +1,7 @@
 create database UsuariosDb
-
+GO
 use UsuariosDb
-
+GO
 create table Usuarios
 (
 	IdUsuario int primary key identity,

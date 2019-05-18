@@ -25,10 +25,10 @@ namespace ProyectoFinal.UI.Registros
             NombreTextBox.Text = String.Empty;
             ApellidoTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
-            AdministradorCheckBox.Checked = false;
-            SupervisorCheckBox.Checked = false;
-            SoporteCheckBox.Checked = false;
-            UsuarioCheckBox.Checked = false;
+            AdministradorRadioButton.Checked = false;
+            SupervisorRadioButton.Checked = false;
+            SoporteRadioButton.Checked = false;
+            UsuarioRadioButton.Checked = false;
             UsuarioTextBox.Text = string.Empty;
             ClaveTextBox.Text = string.Empty;
             FechaDeIngresoDateTimePicker.Value = DateTime.Now;
@@ -41,14 +41,14 @@ namespace ProyectoFinal.UI.Registros
             usuario.Nombre = NombreTextBox.Text;
             usuario.Apellido = ApellidoTextBox.Text;
             usuario.Email = EmailTextBox.Text;
-            if (usuario.NivelDeUsuario == 1)
-                AdministradorCheckBox.Checked = true;
-            else if (usuario.NivelDeUsuario == 2)
-                SupervisorCheckBox.Checked = true;
-            else if (usuario.NivelDeUsuario == 3)
-                SoporteCheckBox.Checked = true;
+            if (AdministradorRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 1;
+            else if (SupervisorRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 2;
+            else if (SoporteRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 3;
             else
-                UsuarioCheckBox.Checked = true;
+                usuario.NivelDeUsuario = 4;
             usuario.Usuario = UsuarioTextBox.Text;
             usuario.Clave = ClaveTextBox.Text;
             usuario.FechaDeIngreso = FechaDeIngresoDateTimePicker.Value;
@@ -61,14 +61,14 @@ namespace ProyectoFinal.UI.Registros
             NombreTextBox.Text = usuario.Nombre;
             ApellidoTextBox.Text = usuario.Apellido;
             EmailTextBox.Text = usuario.Email;
-            if (usuario.NivelDeUsuario == 1)
-                AdministradorCheckBox.Checked = true;
-            else if (usuario.NivelDeUsuario == 2)
-                SupervisorCheckBox.Checked = true;
-            else if (usuario.NivelDeUsuario == 3)
-                SoporteCheckBox.Checked = true;
+            if (AdministradorRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 1;
+            else if (SupervisorRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 2;
+            else if (SoporteRadioButton.Checked == true)
+                usuario.NivelDeUsuario = 3;
             else
-                UsuarioCheckBox.Checked = true;
+                usuario.NivelDeUsuario = 4;
             UsuarioTextBox.Text = usuario.Usuario;
             ClaveTextBox.Text = usuario.Clave;
             FechaDeIngresoDateTimePicker.Value = usuario.FechaDeIngreso;
@@ -92,7 +92,7 @@ namespace ProyectoFinal.UI.Registros
                 paso = false;
             }
 
-            if (AdministradorCheckBox.Checked == false && SupervisorCheckBox.Checked == false && SoporteCheckBox.Checked == false && UsuarioCheckBox.Checked == false)
+            if (AdministradorRadioButton.Checked == false && SupervisorRadioButton.Checked == false && SoporteRadioButton.Checked == false && UsuarioRadioButton.Checked == false)
             {
                 MyErrorProvider.SetError(NivelDeUsuarioGroupBox, "Debe elegir un tipo de usuario");
                 NivelDeUsuarioGroupBox.Focus();
@@ -101,14 +101,14 @@ namespace ProyectoFinal.UI.Registros
 
             if (string.IsNullOrWhiteSpace(UsuarioTextBox.Text))
             {
-                MyErrorProvider.SetError(UsuarioTextBox, "El campo \"Usuario\" no puede estar vacio");
+                MyErrorProvider.SetError(UsuarioTextBox, "El campo \"Usuario\" no puede estar vacio y/o tener espacio");
                 UsuarioTextBox.Focus();
                 paso = false;
             }
 
             if (string.IsNullOrWhiteSpace(ClaveTextBox.Text))
             {
-                MyErrorProvider.SetError(ClaveTextBox, "El campo \"Clave\" no puede estar vacio");
+                MyErrorProvider.SetError(ClaveTextBox, "El campo \"Clave\" no puede estar vacio y/o tener espacio");
                 ClaveTextBox.Focus();
                 paso = false;
             }
@@ -122,8 +122,8 @@ namespace ProyectoFinal.UI.Registros
         }
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            int id;
             Limpiar();
+            int id;
             Usuarios usuario = new Usuarios();
             int.TryParse(IdUsuarioNumericUpDown.Text, out id);
             
@@ -131,7 +131,7 @@ namespace ProyectoFinal.UI.Registros
 
             if (usuario != null)
             {
-                MessageBox.Show("Usuario encontrad");
+                MessageBox.Show("Usuario encontrado");
                 LlenaCampos(usuario);
             }
             else
@@ -145,25 +145,25 @@ namespace ProyectoFinal.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Usuarios usuario;
+            Usuarios usuarios;
             bool paso = false;
 
             if (!Validar())
                 return;
 
-            usuario = LlenaClase();
+            usuarios = LlenaClase();
             Limpiar();
 
             if (IdUsuarioNumericUpDown.Value == 0)
-                paso = UsuariosBLL.Guardar(usuario);
+                paso = UsuariosBLL.Guardar(usuarios);
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar una persona que no existe");
+                    MessageBox.Show("No se puede modificar una persona que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = UsuariosBLL.Modificar(usuario);
+                paso = UsuariosBLL.Modificar(usuarios);
             }
 
             if (paso)
@@ -172,11 +172,6 @@ namespace ProyectoFinal.UI.Registros
                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void EliminarButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdministradorCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
 
@@ -191,6 +186,19 @@ namespace ProyectoFinal.UI.Registros
                 MyErrorProvider.SetError(IdUsuarioNumericUpDown, "No se puede eliminar un usuario que no existe");
         }
 
+        private void AdministradorCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
 
+        private void IdUsuarioNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SupervisorRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
