@@ -200,5 +200,10 @@ namespace ProyectoFinal.UI.Registros
         {
 
         }
+
+        private void ApellidoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
