@@ -123,10 +123,10 @@ namespace ProyectoFinal.UI.Registros
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             int id;
-
+            Limpiar();
             Usuarios usuario = new Usuarios();
             int.TryParse(IdUsuarioNumericUpDown.Text, out id);
-            Limpiar();
+            
             usuario = UsuariosBLL.Buscar(id);
 
             if (usuario != null)
