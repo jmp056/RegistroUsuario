@@ -1,6 +1,6 @@
-create database UsuariosDb
+create database BlacksmithManagerDb
 GO
-use UsuariosDb
+use BlacksmithManagerDb
 GO
 create table Usuarios
 (
