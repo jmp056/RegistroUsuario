@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
 {
-    public partial class RegistroUsuarios : Form
+    public partial class RUsuarios : Form
     {
-        public RegistroUsuarios()
+        public RUsuarios()
         {
             InitializeComponent();
         }

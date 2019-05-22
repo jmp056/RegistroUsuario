@@ -20,7 +20,7 @@ namespace ProyectoFinal
 
         private void RegistrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroUsuarios rg = new RegistroUsuarios();
+            RUsuarios rg = new RUsuarios();
             rg.Show();
         }
 
