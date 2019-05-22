@@ -15,7 +15,7 @@ namespace ProyectoFinal.Entidades
         public string Clave { get; set; }
         public DateTime FechaDeIngreso { get; set; }
 
-        public Usuarios()
+        public Usuarios(int v, string v1, string v2, string v3, int v4, string v5, string v6, DateTime now)
         {
             IdUsuario = 0;
             Nombre = string.Empty;

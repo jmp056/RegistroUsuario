@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal", "ProyectoFinal.csproj", "{AA156D21-3A7E-4365-B451-11900402B2BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlacksmithManager", "BlacksmithManager.csproj", "{AA156D21-3A7E-4365-B451-11900402B2BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlacksmithManagerTests", "..\ProyectoFinalTests\BlacksmithManagerTests.csproj", "{3C37DE7D-4254-4093-825D-C06372BA0B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AA156D21-3A7E-4365-B451-11900402B2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA156D21-3A7E-4365-B451-11900402B2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA156D21-3A7E-4365-B451-11900402B2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C37DE7D-4254-4093-825D-C06372BA0B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C37DE7D-4254-4093-825D-C06372BA0B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C37DE7D-4254-4093-825D-C06372BA0B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C37DE7D-4254-4093-825D-C06372BA0B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
