@@ -23,5 +23,6 @@ namespace ProyectoFinal
             RegistroUsuarios rg = new RegistroUsuarios();
             rg.Show();
         }
+
     }
 }
