@@ -1,4 +1,5 @@
-﻿using ProyectoFinal.UI.Registros;
+﻿using ProyectoFinal.UI.Consultas;
+using ProyectoFinal.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,5 +25,10 @@ namespace ProyectoFinal
             rg.Show();
         }
 
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUsuarios rg = new CUsuarios();
+            rg.Show();
+        }
     }
 }
