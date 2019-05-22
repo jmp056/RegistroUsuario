@@ -54,14 +54,14 @@ namespace ProyectoFinal.UI.Registros
             NombreTextBox.Text = usuario.Nombre;
             ApellidoTextBox.Text = usuario.Apellido;
             EmailTextBox.Text = usuario.Email;
-            if (AdministradorRadioButton.Checked == true)
-                usuario.NivelDeUsuario = 1;
-            else if (SupervisorRadioButton.Checked == true)
-                usuario.NivelDeUsuario = 2;
-            else if (SoporteRadioButton.Checked == true)
-                usuario.NivelDeUsuario = 3;
-            else
-                usuario.NivelDeUsuario = 4;
+            if (usuario.NivelDeUsuario == 1)
+                AdministradorRadioButton.Checked = true;
+            else if (usuario.NivelDeUsuario == 2)
+                SupervisorRadioButton.Checked = true;
+            else if (usuario.NivelDeUsuario == 3)
+                SoporteRadioButton.Checked = true;
+            else if(usuario.NivelDeUsuario == 4)
+                UsuarioRadioButton.Checked = true;
             UsuarioTextBox.Text = usuario.Usuario;
             ClaveTextBox.Text = usuario.Clave;
             FechaDeIngresoDateTimePicker.Value = usuario.FechaDeIngreso;
@@ -110,16 +110,16 @@ namespace ProyectoFinal.UI.Registros
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            Usuarios usuarios = UsuariosBLL.Buscar((int)IdUsuarioNumericUpDown.Value);
-            return usuarios != null;
+            Usuarios usuario = UsuariosBLL.Buscar((int)IdUsuarioNumericUpDown.Value);
+            return (usuario != null);
         }
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            Limpiar();
             int id;
             Usuarios usuario = new Usuarios();
             int.TryParse(IdUsuarioNumericUpDown.Text, out id);
-            
+
+            Limpiar();
             usuario = UsuariosBLL.Buscar(id);
 
             if (usuario != null)
@@ -138,17 +138,17 @@ namespace ProyectoFinal.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Usuarios usuarios;
+            Usuarios usuario;
             bool paso = false;
 
             if (!Validar())
                 return;
 
-            usuarios = LlenaClase();
+            usuario = LlenaClase();
             Limpiar();
 
             if (IdUsuarioNumericUpDown.Value == 0)
-                paso = UsuariosBLL.Guardar(usuarios);
+                paso = UsuariosBLL.Guardar(usuario);
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
@@ -156,7 +156,7 @@ namespace ProyectoFinal.UI.Registros
                     MessageBox.Show("No se puede modificar una persona que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = UsuariosBLL.Modificar(usuarios);
+                paso = UsuariosBLL.Modificar(usuario);
             }
 
             if (paso)
@@ -179,24 +179,5 @@ namespace ProyectoFinal.UI.Registros
                 MyErrorProvider.SetError(IdUsuarioNumericUpDown, "No se puede eliminar un usuario que no existe");
         }
 
-        private void AdministradorCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void IdUsuarioNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SupervisorRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ApellidoTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

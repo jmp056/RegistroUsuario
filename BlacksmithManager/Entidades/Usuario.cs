@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoFinal.Entidades
 {
-    public class Usuario
+    public class Usuarios
     {
         [Key]
         public int IdUsuario { get; set; }
@@ -11,18 +11,18 @@ namespace ProyectoFinal.Entidades
         public string Email { get; set; }
         public string Apellido { get; set; }
         public int NivelDeUsuario { get; set; }
-        public string NUsuario { get; set; }
+        public string Usuario { get; set; }
         public string Clave { get; set; }
         public DateTime FechaDeIngreso { get; set; }
 
-        public Usuario()
+        public Usuarios()
         {
             IdUsuario = 0;
             Nombre = string.Empty;
             Apellido = string.Empty;
             Email = string.Empty;
             NivelDeUsuario = 0;
-            NUsuario = string.Empty;
+            Usuario = string.Empty;
             Clave = string.Empty;
             FechaDeIngreso = DateTime.Now;
         }

@@ -134,7 +134,6 @@
             this.IdUsuarioNumericUpDown.Name = "IdUsuarioNumericUpDown";
             this.IdUsuarioNumericUpDown.Size = new System.Drawing.Size(117, 21);
             this.IdUsuarioNumericUpDown.TabIndex = 5;
-            this.IdUsuarioNumericUpDown.ValueChanged += new System.EventHandler(this.IdUsuarioNumericUpDown_ValueChanged);
             // 
             // NombreTextBox
             // 
@@ -150,7 +149,6 @@
             this.ApellidoTextBox.Name = "ApellidoTextBox";
             this.ApellidoTextBox.Size = new System.Drawing.Size(200, 21);
             this.ApellidoTextBox.TabIndex = 11;
-            this.ApellidoTextBox.TextChanged += new System.EventHandler(this.ApellidoTextBox_TextChanged);
             // 
             // EmailTextBox
             // 
@@ -225,7 +223,6 @@
             this.SupervisorRadioButton.TabStop = true;
             this.SupervisorRadioButton.Text = "Supervisor";
             this.SupervisorRadioButton.UseVisualStyleBackColor = true;
-            this.SupervisorRadioButton.CheckedChanged += new System.EventHandler(this.SupervisorRadioButton_CheckedChanged);
             // 
             // SoporteRadioButton
             // 

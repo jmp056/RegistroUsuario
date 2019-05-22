@@ -10,13 +10,13 @@ namespace ProyectoFinal.BLL
 {
     public class UsuariosBLL
     {
-        public static bool Guardar(Usuarios usuarios)
+        public static bool Guardar(Usuarios usuario)
         {
             bool paso = false;
             Contexto db = new Contexto();
             try
             {
-                if (db.Usuario.Add(usuarios) != null)
+                if (db.Usuarios.Add(usuario) != null)
                     paso = db.SaveChanges() > 0;
             }
             catch (Exception)
@@ -30,13 +30,13 @@ namespace ProyectoFinal.BLL
             return paso;
         }
 
-        public static bool Modificar(Usuarios usuarios)
+        public static bool Modificar(Usuarios usuario)
         {
             bool paso = false;
             Contexto db = new Contexto();
             try
             {
-                db.Entry(usuarios).State = EntityState.Modified;
+                db.Entry(usuario).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
@@ -56,8 +56,8 @@ namespace ProyectoFinal.BLL
             Contexto db = new Contexto();
             try
             {
-                var eliminar = db.Usuario.Find(id);
-                db.Entry(eliminar).State = EntityState.Deleted;
+                var eliminar = db.Usuarios.Find(id);
+                db.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
                 paso = db.SaveChanges() > 0;
             }
             catch (Exception)
@@ -77,7 +77,7 @@ namespace ProyectoFinal.BLL
             Usuarios usuario = new Usuarios();
             try
             {
-                usuario = db.Usuario.Find(id);
+                usuario = db.Usuarios.Find(id);
             }
             catch (Exception)
             {
@@ -96,7 +96,7 @@ namespace ProyectoFinal.BLL
             Contexto db = new Contexto();
             try
             {
-                Lista = db.Usuario.Where(usuario).ToList();
+                Lista = db.Usuarios.Where(usuario).ToList();
             }
             catch (Exception)
             {
