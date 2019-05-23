@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CUsuarios));
             this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CriterioTextBox = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@
             this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdeDateTimePicker.Location = new System.Drawing.Point(66, 12);
             this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
-            this.DesdeDateTimePicker.Size = new System.Drawing.Size(102, 21);
+            this.DesdeDateTimePicker.Size = new System.Drawing.Size(100, 21);
             this.DesdeDateTimePicker.TabIndex = 0;
             // 
             // HastaDateTimePicker
@@ -59,13 +60,13 @@
             this.HastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastaDateTimePicker.Location = new System.Drawing.Point(230, 12);
             this.HastaDateTimePicker.Name = "HastaDateTimePicker";
-            this.HastaDateTimePicker.Size = new System.Drawing.Size(135, 21);
+            this.HastaDateTimePicker.Size = new System.Drawing.Size(100, 21);
             this.HastaDateTimePicker.TabIndex = 1;
             // 
             // CriterioTextBox
             // 
             this.CriterioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CriterioTextBox.Location = new System.Drawing.Point(624, 12);
+            this.CriterioTextBox.Location = new System.Drawing.Point(586, 12);
             this.CriterioTextBox.Name = "CriterioTextBox";
             this.CriterioTextBox.Size = new System.Drawing.Size(100, 21);
             this.CriterioTextBox.TabIndex = 3;
@@ -81,7 +82,7 @@
             "4- Apellido",
             "5- Email",
             "6- Usuario"});
-            this.FiltrarComboBox.Location = new System.Drawing.Point(433, 12);
+            this.FiltrarComboBox.Location = new System.Drawing.Point(395, 12);
             this.FiltrarComboBox.Name = "FiltrarComboBox";
             this.FiltrarComboBox.Size = new System.Drawing.Size(121, 23);
             this.FiltrarComboBox.TabIndex = 4;
@@ -121,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(386, 15);
+            this.label3.Location = new System.Drawing.Point(348, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 15);
             this.label3.TabIndex = 9;
@@ -131,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(560, 15);
+            this.label4.Location = new System.Drawing.Point(522, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 10;
@@ -142,9 +143,9 @@
             this.ConsultarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultarButton.Image = global::ProyectoFinal.Properties.Resources.lupa_para_buscar_opt_opt;
             this.ConsultarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ConsultarButton.Location = new System.Drawing.Point(746, 7);
+            this.ConsultarButton.Location = new System.Drawing.Point(723, 7);
             this.ConsultarButton.Name = "ConsultarButton";
-            this.ConsultarButton.Size = new System.Drawing.Size(75, 34);
+            this.ConsultarButton.Size = new System.Drawing.Size(85, 34);
             this.ConsultarButton.TabIndex = 5;
             this.ConsultarButton.Text = "Buscar";
             this.ConsultarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -166,8 +167,9 @@
             this.Controls.Add(this.CriterioTextBox);
             this.Controls.Add(this.HastaDateTimePicker);
             this.Controls.Add(this.DesdeDateTimePicker);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CUsuarios";
-            this.Text = "CUsuarios";
+            this.Text = "Consulta de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

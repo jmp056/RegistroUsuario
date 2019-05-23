@@ -63,8 +63,6 @@ namespace ProyectoFinal.UI.Consultas
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
         }
-
-
     }
 }
 

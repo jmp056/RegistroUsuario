@@ -98,6 +98,7 @@
             this.consultarCargosToolStripMenuItem.Name = "consultarCargosToolStripMenuItem";
             this.consultarCargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarCargosToolStripMenuItem.Text = "Consultar Cargos";
+            this.consultarCargosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarCargosToolStripMenuItem_Click);
             // 
             // MainForm
             // 

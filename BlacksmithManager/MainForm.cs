@@ -36,5 +36,11 @@ namespace ProyectoFinal
             RCargos r = new RCargos();
             r.Show();
         }
+
+        private void ConsultarCargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CCargos c = new CCargos();
+            c.Show();
+        }
     }
 }
