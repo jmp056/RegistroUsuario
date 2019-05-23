@@ -95,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Consultas\CUsuarios.resx">
       <DependentUpon>CUsuarios.cs</DependentUpon>
@@ -122,6 +123,12 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scritps\BlacksmithManagerDb.sql" />
+    <None Include="Resources\documento.png" />
+    <None Include="Resources\lupa-para-buscar_opt_opt.png" />
+    <None Include="Resources\portafolios-con-lapiz_opt %281%29.png" />
+    <None Include="Resources\guardar_opt_opt %281%29.png" />
+    <None Include="Resources\guardar_opt_opt.png" />
+    <None Include="Resources\eliminar-foto_opt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

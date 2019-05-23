@@ -123,6 +123,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="registrarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAATZJREFUSEvt1TlKBEEUh/FOVMTI1CUXMwMT9UKKmugVPIwLJpp4ARcQRQ/gDRQ3
+        MNTvg35Q/aYZl24x8Q8/GKp6Xnf1q5qp/tNXZnGA59oh5tBLLH6P9+QBM+gcnzwXD/vonBe0FdcTOufX
+        b2BD24prF53jbrGhubiN76XJxp1kQ30lj9hDb8X/LKPYxAVea2fYgHOdMo1r5L6EK0zh0yxiB8c4cYCM
+        4RZthUvepHUl49jGHcovbMH4WspxLWE5jWkdjbisG+QLtQBzjjwXyeP2pJEj5IvCJIzNjDGfPKdcib+8
+        jbwhJrMJmPIGKw6kOBbzAzeIiTbzMC47z0Xy+MAryheUbK5xn+c5n7p88rCGb8dtOuwMhEuM4Edxt7nP
+        2wrL4l86aMPiIXKfnyL+q/28ivqAVdUHb+S4nZNpI4gAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="registroDeCargosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA37AAAN+wELdzWbAAAAB3RJ
         TUUH4wUSCTcqKpmBhQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEjqSURBVHhe

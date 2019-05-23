@@ -89,6 +89,15 @@ namespace ProyectoFinal.UI.Registros
 
             if (IdCargoNumericUpDown.Value == 0)
                 paso = CargosBLL.Guardar(cargo);
+            /*else
+            {
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MessageBox.Show("No se puede modificar un cargo que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                paso = CargosBLL.Modificar(cargo);
+            }*/
 
             if (paso)
                 MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
