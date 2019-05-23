@@ -21,14 +21,20 @@ namespace ProyectoFinal
 
         private void RegistrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RUsuarios rg = new RUsuarios();
-            rg.Show();
+            RUsuarios r = new RUsuarios();
+            r.Show();
         }
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CUsuarios rg = new CUsuarios();
-            rg.Show();
+            CUsuarios c = new CUsuarios();
+            c.Show();
+        }
+
+        private void RegistroDeCargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RCargos r = new RCargos();
+            r.Show();
         }
     }
 }

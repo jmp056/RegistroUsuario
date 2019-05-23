@@ -34,6 +34,7 @@
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeCargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarUsuarioToolStripMenuItem});
+            this.registrarUsuarioToolStripMenuItem,
+            this.registroDeCargosToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registroToolStripMenuItem.Text = "Registros";
@@ -79,6 +81,13 @@
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
+            // registroDeCargosToolStripMenuItem
+            // 
+            this.registroDeCargosToolStripMenuItem.Name = "registroDeCargosToolStripMenuItem";
+            this.registroDeCargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroDeCargosToolStripMenuItem.Text = "Registro de Cargos";
+            this.registroDeCargosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeCargosToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeCargosToolStripMenuItem;
     }
 }
 

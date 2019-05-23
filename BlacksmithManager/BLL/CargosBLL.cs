@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal.BLL
 {
@@ -92,9 +90,9 @@ namespace ProyectoFinal.BLL
             return cargo;
         }
 
-        /*public static List<Cargos> GetList(Expression<Func<Cargos, bool>> cargo)
+        public static List<Cargos> GetList(Expression<Func<Cargos, bool>> cargo)
         {
-            List<Usuarios> Lista = new List<Usuarios>();
+            List<Cargos> Lista = new List<Cargos>();
             Contexto db = new Contexto();
             try
             {
@@ -109,6 +107,6 @@ namespace ProyectoFinal.BLL
                 db.Dispose();
             }
             return Lista;
-        }*/
+        }
     }
 }

@@ -72,6 +72,12 @@
     <Compile Include="UI\Consultas\CUsuarios.Designer.cs">
       <DependentUpon>CUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\RCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RCargos.Designer.cs">
+      <DependentUpon>RCargos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consultas\CUsuarios.resx">
       <DependentUpon>CUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RCargos.resx">
+      <DependentUpon>RCargos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RUsuarios.resx">
       <DependentUpon>RUsuarios.cs</DependentUpon>
